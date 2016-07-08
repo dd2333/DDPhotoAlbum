@@ -1,0 +1,18 @@
+/* 
+  strings.strings
+  DDPhotoAlbum
+
+  Created by dd2333 on 16/6/27.
+  Copyright © 2016年 dd2333. All rights reserved.
+*/
+
+"Album" = "相簿";
+
+"Done" = "下一步";
+
+"Cancel" = "取消";
+
+"SelectPhoto" = "请选择照片";
+"SelectPhotos" = "请选择 1-%ld 张照片";
+
+"OK" = "好";
