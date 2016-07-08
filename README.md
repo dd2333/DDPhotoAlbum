@@ -20,7 +20,8 @@ Usage
 
 ### Cocoapods import:
 Pop is available on CocoaPods. Just add the following to your project Podfile:<br />
-    pod 'pop', :git => 'https://github.com/facebook/pop.git'
+
+    pod 'DDPhotoAlbum', :git => "https://github.com/dd2333/DDPhotoAlbum.git"
 
 ### Manual import：
 * Drag All files in the DDPhotoAlbum folder to project<br />
