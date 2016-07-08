@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "DDPhotoAlbum/DDPhotoAlbum.h"
+#import "DDPhotoAlbum.h"
 
 @interface ViewController () <UITableViewDataSource,UITableViewDelegate>
 
