@@ -18,6 +18,10 @@ Usage
 -----------------------------------
 * The simulator does not support the camera.<br />
 
+### Cocoapods import:
+Pop is available on CocoaPods. Just add the following to your project Podfile:<br />
+    pod 'pop', :git => 'https://github.com/facebook/pop.git'
+
 ### Manual import：
 * Drag All files in the DDPhotoAlbum folder to project<br />
 * Use by including the following import:<br>
