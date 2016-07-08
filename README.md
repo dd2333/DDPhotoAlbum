@@ -10,10 +10,11 @@ Requirements
 -----------------------------------
 * iOS 7.0+<br />
 * ARC<br />
-* The simulator does not support the camera.<br />
 
 Usage
 -----------------------------------
+* The simulator does not support the camera.<br />
+
 ### Manual import：
 * Drag All files in the DDPhotoAlbum folder to project<br />
 * Use by including the following import:<br>
