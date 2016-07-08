@@ -1,3 +1,6 @@
+[![image]](http://www.dd2333.com/)
+[image]: https://github.com/dd2333/DDPhotoAlbum/blob/master/dd2333.png "github"
+
 DDPhotoAlbum
 ===================================
   iOS library that provides for multiple image selection.<br />
