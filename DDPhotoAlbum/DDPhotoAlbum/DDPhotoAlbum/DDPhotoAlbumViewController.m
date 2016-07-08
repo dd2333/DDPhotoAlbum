@@ -14,6 +14,7 @@
 #import "DDPhotoAlbumSelectView.h"
 #import "DDPhotoAlbumModel.h"
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface DDPhotoAlbumViewController () <UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
@@ -61,9 +62,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.imagePickerController = [[UIImagePickerController alloc]init];
-    self.imagePickerController.delegate = self;
-    self.imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    if (self.isShowCamera) {
+        self.imagePickerController = [[UIImagePickerController alloc]init];
+        self.imagePickerController.delegate = self;
+        self.imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
     
     [self initUI];
     [self getAlbums];
@@ -87,8 +90,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)dealloc{
-    
+- (BOOL)isShowCamera{
+    if ([self isPermissionCamera]) {
+        return _isShowCamera;
+    }else{
+        return NO;
+    }
 }
 
 - (NSMutableArray *)selectedThumbImages{
@@ -494,6 +501,36 @@
         self.layout.columnsCount = DD_ITEM_COLUMN_COUNT_LANDSCAPE;
     }else{
         self.layout.columnsCount = DD_ITEM_COLUMN_COUNT;
+    }
+}
+
+#pragma mark - check
+
+/**
+ *  是否允许访问相册
+ *
+ *  @return 是否允许访问相册
+ */
+- (BOOL)isPermissionAlbum{
+    ALAuthorizationStatus author = [ALAssetsLibrary authorizationStatus];
+    if (author == 1 || author == 2){
+        return NO;
+    }else{
+        return YES;
+    }
+}
+
+/**
+ *  是否允许访问相机
+ *
+ *  @return 是否允许访问相机
+ */
+- (BOOL)isPermissionCamera{
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if(authStatus == ALAuthorizationStatusAuthorized){
+        return YES;
+    }else{
+        return NO;
     }
 }
 

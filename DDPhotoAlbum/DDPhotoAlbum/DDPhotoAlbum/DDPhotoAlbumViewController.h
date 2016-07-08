@@ -29,4 +29,21 @@ typedef void (^DidSelectedBlock)(NSArray *images,NSArray *thumbnailImages);
 
 - (void)setDidSelectedBlock:(DidSelectedBlock)didSelectedBlock;
 
+
+
+#pragma mark - check
+/**
+ *  是否允许访问相册
+ *
+ *  @return 是否允许访问相册
+ */
+- (BOOL)isPermissionAlbum;
+
+/**
+ *  是否允许访问相机
+ *
+ *  @return 是否允许访问相机
+ */
+- (BOOL)isPermissionCamera;
+
 @end
