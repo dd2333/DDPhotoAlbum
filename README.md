@@ -42,4 +42,4 @@ Usage
 
 License
 -----------------------------------
-  AFNetworking is released under the MIT license. See LICENSE for details.<br />
+  DDPhotoAlbum is released under the MIT license. See LICENSE for details.<br />
