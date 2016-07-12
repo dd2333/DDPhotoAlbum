@@ -24,7 +24,7 @@ Usage
   ```pod 'DDPhotoAlbum', :git => "https://github.com/dd2333/DDPhotoAlbum.git"```
 
 * Use by including the following import:<br />
-```#import \<DDPhotoAlbum.h\>```
+```#import <DDPhotoAlbum.h>```
 
 ### Manual import：
 * Drag All files in the DDPhotoAlbum folder to project<br />
