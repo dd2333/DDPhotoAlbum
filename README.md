@@ -21,15 +21,15 @@ Usage
 ### Cocoapods import:
 * Pop is available on CocoaPods. Just add the following to your project Podfile:<br />
 
-    pod 'DDPhotoAlbum', :git => "https://github.com/dd2333/DDPhotoAlbum.git"
+  ```pod 'DDPhotoAlbum', :git => "https://github.com/dd2333/DDPhotoAlbum.git"```
 
 * Use by including the following import:<br />
-     #import \<DDPhotoAlbum.h\>
+```#import <DDPhotoAlbum.h>```
 
 ### Manual import：
 * Drag All files in the DDPhotoAlbum folder to project<br />
 * Use by including the following import:<br />
-     #import "DDPhotoAlbum.h"
+```#import "DDPhotoAlbum.h"```
 
 ### Open the Album
     DDPhotoAlbumViewController *photoAlbumViewController = [[DDPhotoAlbumViewController alloc]init];
@@ -42,4 +42,4 @@ Usage
 
 License
 -----------------------------------
-  AFNetworking is released under the MIT license. See LICENSE for details.<br />
+  DDPhotoAlbum is released under the MIT license. See LICENSE for details.<br />
