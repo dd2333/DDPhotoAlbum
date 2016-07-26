@@ -21,7 +21,7 @@ Usage
 ### Cocoapods import:
 * Pop is available on CocoaPods. Just add the following to your project Podfile:<br />
 
-  ```pod 'DDPhotoAlbum', :git => "https://github.com/dd2333/DDPhotoAlbum.git"```
+  ```pod 'DDPhotoAlbum', '~> 1.0.0'```
 
 * Use by including the following import:<br />
 ```#import <DDPhotoAlbum.h>```
