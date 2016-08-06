@@ -448,7 +448,7 @@
         [weakSelf.collectionView reloadData];
     }];
     [self.toolsView setDoneBtnClick:^{
-        if (self.selectedThumbImages.count == 0) {
+        if (weakSelf.selectedThumbImages.count == 0) {
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:[NSString stringWithFormat:DDLocalMsg(@"SelectPhoto"),weakSelf.maxPhotos] delegate:nil cancelButtonTitle:DDLocalMsg(@"OK") otherButtonTitles:nil, nil];
             [alert show];
             return;
