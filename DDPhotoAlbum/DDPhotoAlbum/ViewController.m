@@ -15,7 +15,10 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController{
+    NSArray *_thumbnailImages;
+    NSArray *_imageUrls;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -55,7 +58,10 @@
     DDPhotoAlbumViewController *photoAlbumViewController = [[DDPhotoAlbumViewController alloc]init];
     photoAlbumViewController.maxPhotos = self.maxPhotos;
     photoAlbumViewController.isShowCamera = self.isShowCamera;
-    [photoAlbumViewController setDidSelectedBlock:^(NSArray *images, NSArray *thumbnailImages) {
+    [photoAlbumViewController setPreLoadingImages:_thumbnailImages imageUrls:_imageUrls];
+    [photoAlbumViewController setDidSelectedBlock:^(NSArray *images,NSArray *thumbnailImages,NSArray *imagesUrl) {
+        _thumbnailImages = thumbnailImages;
+        _imageUrls = imagesUrl;
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:[NSString stringWithFormat:@"Total: %ld",images.count] delegate:nil cancelButtonTitle:DDLocalMsg(@"OK") otherButtonTitles:nil, nil];
         [alert show];
     }];

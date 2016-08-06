@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^DidSelectedBlock)(NSArray *images,NSArray *thumbnailImages);
+typedef void (^DidSelectedBlock)(NSArray *images,NSArray *thumbnailImages,NSArray *imagesUrl);
 typedef void (^DidCancelBlock)();
 
 @interface DDPhotoAlbumViewController : UIViewController
@@ -17,6 +17,14 @@ typedef void (^DidCancelBlock)();
  *  选择照片的最大个数,min 1,max 9,default 9
  */
 @property (nonatomic, assign) NSUInteger maxPhotos;
+
+/**
+ *  设置预加载的图片
+ *
+ *  @param thumbImages 缩略图
+ *  @param imageUrls   图片url
+ */
+- (void)setPreLoadingImages:(NSArray*)thumbImages imageUrls:(NSArray*)imageUrls;
 
 /**
  *  是否显示照相机按钮,default YES

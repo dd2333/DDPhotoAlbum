@@ -112,21 +112,37 @@
     return _selectedImagesURL;
 }
 
+- (void)dealloc{
+    
+}
+
 #pragma mark - public
 
 - (void)setMaxPhotos:(NSUInteger)maxPhotos{
     _maxPhotos = MAX(MIN(maxPhotos, 9),1);
 }
 
+- (void)setPreLoadingImages:(NSArray*)thumbImages imageUrls:(NSArray*)imageUrls{
+    if (thumbImages && imageUrls) {
+        if (thumbImages.count > 0 &&
+            thumbImages.count <= 9 &&
+            imageUrls.count == thumbImages.count) {
+            _selectedThumbImages = [[NSMutableArray alloc]initWithArray:thumbImages];
+            _selectedImagesURL = [[NSMutableArray alloc]initWithArray:imageUrls];
+        }else{
+            [NSException raise:@"DDPhotoAlbum" format:@"The images count should be more than 0 and less than or equal to 9"];
+        }
+    }else{
+        _selectedThumbImages = nil;
+        _selectedImagesURL = nil;
+    }
+}
+
 #pragma mark - handle
 
 //点击返回按钮
 - (void)backBtnClick:(id)sender{
-    if (self.navigationController) {
-        [self.navigationController popViewControllerAnimated:YES];
-    }else{
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
+    [self back];
     if (self.didCancelBlock) {
         self.didCancelBlock();
     }
@@ -439,12 +455,13 @@
         }
         [weakSelf getOriginPhotos:weakSelf.selectedImagesURL completion:^(NSArray *photos) {
             if (weakSelf.didSelectedBlock) {
-                weakSelf.didSelectedBlock(photos,weakSelf.selectedThumbImages);
+                weakSelf.didSelectedBlock(photos,weakSelf.selectedThumbImages,weakSelf.selectedImagesURL);
             }
-            [weakSelf backBtnClick:nil];
+            [weakSelf back];
         }];
     }];
     [self.view addSubview:self.toolsView];
+    [self.toolsView refresh:self.selectedThumbImages];
     
     self.toolsView.alpha = 0;
 }
@@ -504,6 +521,14 @@
         self.layout.columnsCount = DD_ITEM_COLUMN_COUNT_LANDSCAPE;
     }else{
         self.layout.columnsCount = DD_ITEM_COLUMN_COUNT;
+    }
+}
+
+- (void)back{
+    if (self.navigationController) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }else{
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
 
