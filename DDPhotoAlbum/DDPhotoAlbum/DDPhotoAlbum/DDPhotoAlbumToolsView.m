@@ -128,7 +128,7 @@
         [DD_MAIN_COLOR getRed:&r green:&g blue:&b alpha:nil];
         [_doneBtn setBackgroundImage:[self imageWithColor:[UIColor colorWithRed:r-0.2 green:g-0.2 blue:b-0.2 alpha:1] size:CGSizeMake(1, 1)] forState:UIControlStateNormal];
     }
-    self.selectedCountLabel.text = [NSString stringWithFormat:@"%ld",images.count];
+    self.selectedCountLabel.text = [NSString stringWithFormat:@"%ld",(unsigned long)images.count];
 }
 
 #pragma mark - collectionView

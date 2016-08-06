@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DDPhotoAlbum"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "iOS library that provides for multiple image selection."
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-                   iOS library that provides for multiple image selection.
+                   iOS library that provides for multiple image selection
                    DESC
 
   s.homepage     = "https://github.com/dd2333/DDPhotoAlbum"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/dd2333/DDPhotoAlbum.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/dd2333/DDPhotoAlbum.git", :tag => "1.1.0" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

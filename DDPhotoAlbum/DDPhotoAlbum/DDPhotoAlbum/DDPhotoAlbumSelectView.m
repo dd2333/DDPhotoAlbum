@@ -67,7 +67,7 @@
     DDPhotoAlbumSelectTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     DDPhotoAlbumModel *m = self.albumsInfo[indexPath.row];
     cell.albumImageView.image = m.posterImage;
-    cell.infoLabel.text = [NSString stringWithFormat:@"%@ (%ld)",m.name,m.count];
+    cell.infoLabel.text = [NSString stringWithFormat:@"%@ (%ld)",m.name,(long)m.count];
     return cell;
 }
 
