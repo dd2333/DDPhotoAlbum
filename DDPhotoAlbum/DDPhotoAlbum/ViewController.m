@@ -59,6 +59,10 @@
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"" message:[NSString stringWithFormat:@"Total: %ld",images.count] delegate:nil cancelButtonTitle:DDLocalMsg(@"OK") otherButtonTitles:nil, nil];
         [alert show];
     }];
+    
+    [photoAlbumViewController setDidCancelBlock:^{
+        NSLog(@"Cancel");
+    }];
 
     switch (indexPath.row) {
         case 0:

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 typedef void (^DidSelectedBlock)(NSArray *images,NSArray *thumbnailImages);
+typedef void (^DidCancelBlock)();
 
 @interface DDPhotoAlbumViewController : UIViewController
 
@@ -27,9 +28,14 @@ typedef void (^DidSelectedBlock)(NSArray *images,NSArray *thumbnailImages);
  */
 @property (nonatomic, copy) DidSelectedBlock didSelectedBlock;
 
+/**
+ *  点击取消按钮执行该block
+ */
+@property (nonatomic, copy) DidCancelBlock didCancelBlock;
+
 - (void)setDidSelectedBlock:(DidSelectedBlock)didSelectedBlock;
 
-
+- (void)setDidCancelBlock:(DidCancelBlock)didCancelBlock;
 
 #pragma mark - check
 /**

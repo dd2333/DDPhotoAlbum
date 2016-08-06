@@ -127,6 +127,9 @@
     }else{
         [self dismissViewControllerAnimated:YES completion:nil];
     }
+    if (self.didCancelBlock) {
+        self.didCancelBlock();
+    }
 }
 
 //点击相簿按钮
