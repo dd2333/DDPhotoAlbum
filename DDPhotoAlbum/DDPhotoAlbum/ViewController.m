@@ -33,6 +33,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setMaxPhotos:(NSUInteger)maxPhotos{
+    _maxPhotos = maxPhotos;
+    _thumbnailImages = nil;
+    _imageUrls = nil;
+}
+
 #pragma mark - tableView
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
