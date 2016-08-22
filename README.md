@@ -21,7 +21,7 @@ Usage
 ### Cocoapods import:
 * Pop is available on CocoaPods. Just add the following to your project Podfile:<br />
 
-  ```pod 'DDPhotoAlbum', '~> 1.1.0'```
+  ```pod 'DDPhotoAlbum', '~> 1.1.1'```
 
 * Use by including the following import:<br />
 ```#import <DDPhotoAlbum.h>```
@@ -35,6 +35,7 @@ Usage
     DDPhotoAlbumViewController *photoAlbumViewController = [[DDPhotoAlbumViewController alloc]init];
     photoAlbumViewController.maxPhotos = self.maxPhotos;
     photoAlbumViewController.isShowCamera = self.isShowCamera;
+    photoAlbumViewController.didSelectAutoBack = YES;
     [photoAlbumViewController setPreLoadingImages:_thumbnailImages imageUrls:_imageUrls];
     [photoAlbumViewController setDidSelectedBlock:^(NSArray *images,NSArray *thumbnailImages,NSArray *imagesUrl) {
         _thumbnailImages = thumbnailImages;
