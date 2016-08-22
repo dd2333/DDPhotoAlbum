@@ -32,6 +32,11 @@ typedef void (^DidCancelBlock)();
 @property (nonatomic, assign) BOOL isShowCamera;
 
 /**
+ *  点击完成后是否自动返回,default NO
+ */
+@property (nonatomic, assign) BOOL didSelectAutoBack;
+
+/**
  *  点击完成按钮执行该block
  */
 @property (nonatomic, copy) DidSelectedBlock didSelectedBlock;

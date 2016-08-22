@@ -454,10 +454,12 @@
             return;
         }
         [weakSelf getOriginPhotos:weakSelf.selectedImagesURL completion:^(NSArray *photos) {
+            if (weakSelf.didSelectAutoBack) {
+                [weakSelf back];
+            }
             if (weakSelf.didSelectedBlock) {
                 weakSelf.didSelectedBlock(photos,weakSelf.selectedThumbImages,weakSelf.selectedImagesURL);
             }
-            [weakSelf back];
         }];
     }];
     [self.view addSubview:self.toolsView];
@@ -524,6 +526,9 @@
     }
 }
 
+/**
+ *  返回上一级页面
+ */
 - (void)back{
     if (self.navigationController) {
         [self.navigationController popViewControllerAnimated:YES];
