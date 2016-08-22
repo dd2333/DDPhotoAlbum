@@ -4,7 +4,7 @@
 DDPhotoAlbum
 ===================================
   iOS library that provides for multiple image selection.<br />
-  
+  ![github](https://github.com/dd2333/DDPhotoAlbum/blob/master/demo.gif "github")
 Installation
 -----------------------------------
   Download DDPhotoAlbum and try out the included iPhone example apps<br />
