@@ -18,7 +18,7 @@ Usage
 * The simulator does not support the camera.<br />
 
 ### Cocoapods import:
-* Pop is available on CocoaPods. Just add the following to your project Podfile:<br />
+* DDPhotoAlbum is available on CocoaPods. Just add the following to your project Podfile:<br />
 
   ```pod 'DDPhotoAlbum', '~> 1.1.1'```
 
