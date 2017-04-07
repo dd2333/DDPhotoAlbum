@@ -1,17 +1,17 @@
-[![github](https://github.com/dd2333/DDPhotoAlbum/blob/master/dd2333.png "dd2333")](http://www.dd2333.com)
 
-DDPhotoAlbum
-===================================
+# DDPhotoAlbum
+[![LICENSE](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/dd2333/DDPhotoAlbum/blob/master/LICENSE)&nbsp;
+[![CocoaPods](http://img.shields.io/cocoapods/v/DDPhotoAlbum.svg?style=flat)](http://cocoapods.org/?q=DDPhotoAlbum)&nbsp;
+[![SUPPORT](https://img.shields.io/badge/support-iOS%207%2B%20-blue.svg?style=flat)](https://en.wikipedia.org/wiki/IOS_7)&nbsp;
+[![BLOG](https://img.shields.io/badge/blog-www.dd2333.com-orange.svg?style=flat)](http://www.dd2333.com)&nbsp;
+-----------------------------------
   iOS library that provides for multiple image selection.<br />
+  
   ![github](https://github.com/dd2333/DDPhotoAlbum/blob/master/demo.gif "github")
+  
 Installation
 -----------------------------------
   Download DDPhotoAlbum and try out the included iPhone example apps<br />
-
-Requirements
------------------------------------
-* iOS 7.0+<br />
-* ARC<br />
 
 Usage
 -----------------------------------
@@ -46,6 +46,3 @@ Usage
     }];
     [self presentViewController:photoAlbumViewController animated:YES completion:nil];
 
-License
------------------------------------
-  DDPhotoAlbum is released under the MIT license.<br />
