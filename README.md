@@ -20,9 +20,7 @@ Usage
 
 ### Cocoapods import:
 * DDPhotoAlbum is available on CocoaPods. Just add the following to your project Podfile:<br />
-
   ```pod 'DDPhotoAlbum', '~> 1.1.1'```
-
 * Use by including the following import:<br />
 ```#import <DDPhotoAlbum.h>```
 
