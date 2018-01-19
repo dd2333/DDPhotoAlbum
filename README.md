@@ -7,8 +7,6 @@
 [![BLOG](https://img.shields.io/badge/blog-www.dd2333.com-orange.svg?style=flat)](http://www.dd2333.com)&nbsp;
 
   Stop update！！！<br />
-  
-  iOS library that provides for multiple image selection.<br />
   
   ![github](https://github.com/dd2333/DDPhotoAlbum/blob/master/demo.gif "github")
   
