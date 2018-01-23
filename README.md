@@ -1,12 +1,10 @@
 
-# DDPhotoAlbum
+# DDPhotoAlbum  (Deprecated)
 
 [![LICENSE](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/dd2333/DDPhotoAlbum/blob/master/LICENSE)&nbsp;
 [![CocoaPods](http://img.shields.io/cocoapods/v/DDPhotoAlbum.svg?style=flat)](http://cocoapods.org/?q=DDPhotoAlbum)&nbsp;
 [![SUPPORT](https://img.shields.io/badge/support-iOS%207%2B%20-blue.svg?style=flat)](https://en.wikipedia.org/wiki/IOS_7)&nbsp;
 [![BLOG](https://img.shields.io/badge/blog-www.dd2333.com-orange.svg?style=flat)](http://www.dd2333.com)&nbsp;
-
-  Stop update！！！<br />
   
   ![github](https://github.com/dd2333/DDPhotoAlbum/blob/master/demo.gif "github")
   
